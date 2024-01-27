@@ -918,6 +918,7 @@ GameObject:
   - component: {fileID: 435153836}
   - component: {fileID: 435153835}
   - component: {fileID: 435153834}
+  - component: {fileID: 435153837}
   m_Layer: 5
   m_Name: btnDeliver
   m_TagString: Untagged
@@ -1039,6 +1040,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435153832}
   m_CullTransparentMesh: 1
+--- !u!114 &435153837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435153832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []
 --- !u!1 &452050948
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,8 +3294,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 641745244}
-  - {fileID: 1551607436}
   - {fileID: 174990163}
+  - {fileID: 1551607436}
   - {fileID: 9213224601579329715}
   - {fileID: 1633788850}
   - {fileID: 527869811}
@@ -3551,7 +3565,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.4
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
@@ -3881,7 +3895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 861, y: 436}
+  m_AnchoredPosition: {x: 902, y: 467}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551607437
@@ -3990,7 +4004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: cf5693c3de3d0c544aa5a25a3a9bf6ed, type: 3}
+  audioClips: []
 --- !u!114 &1614127524 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2369281811922137037, guid: b9a681b6db674ca408aa43d731d388a0, type: 3}
@@ -4052,7 +4066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218, y: 375}
+  m_AnchoredPosition: {x: 124, y: 375}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709570088
@@ -6064,7 +6078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: cf5693c3de3d0c544aa5a25a3a9bf6ed, type: 3}
+  audioClips: []
 --- !u!114 &6212822874281753001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6224,7 +6238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244972415438676591, guid: 275e2522d21c32d43a3d7ccb2f21e1f9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 216
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 4244972415438676591, guid: 275e2522d21c32d43a3d7ccb2f21e1f9, type: 3}
       propertyPath: m_AnchoredPosition.y

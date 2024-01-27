@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class HomeScreenPresenter : ClassWithContext
@@ -7,7 +8,7 @@ public class HomeScreenPresenter : ClassWithContext
     public HomeScreenPresenter(HomeScreenView view)
     {
         this.view = view;
-        //MySoundManager.PlayMusicLoop("Sound/music00");
+        MySoundManager.PlayMusicLoop("Sound/music0" + Random.Range(1,4));
     }
 
     public void GoToPlayGame(string gameId)

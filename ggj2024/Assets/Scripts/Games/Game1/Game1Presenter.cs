@@ -1,4 +1,4 @@
-using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game1Presenter : GameScreenPresenter
@@ -11,7 +11,7 @@ public class Game1Presenter : GameScreenPresenter
         this.gameplay = gameplay;
         this.gameplay.OnFinishGame.AddListener(OnGameOver);
 
-        //MySoundManager.PlayMusicLoop("Sound/music01");
+        MySoundManager.PlayMusicLoop("Sound/music0" + Random.Range(1, 4));
 
         MyView.ShowTutorial();
 
@@ -31,5 +31,17 @@ public class Game1Presenter : GameScreenPresenter
     public void OnTutorialClosed()
     {
         gameplay.StartLevel();
+    }
+
+    public override void Pause()
+    {
+        gameplay.Pause();
+        base.Pause();
+    }
+
+    public override void Resume()
+    {
+        gameplay.Resume();
+        base.Resume();
     }
 }

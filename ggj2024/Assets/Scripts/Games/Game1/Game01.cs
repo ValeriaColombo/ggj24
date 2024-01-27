@@ -46,12 +46,15 @@ public class Game01 : MonoBehaviourWithContext
 
     private void Start()
     {
+        isPaused = true;
+
         OnFinishGame = new UnityEvent<int>();
         gameConfig = new GameConfig();
         ratings.Add(3);
 
         clientRatingDialogueBox.SetActive(false);
         clientOrder.SetActive(false);
+        clock.fillAmount = 0;
     }
 
     private void BodyPartSelected(string characterId, string part)
@@ -111,6 +114,7 @@ public class Game01 : MonoBehaviourWithContext
         var legsSprite = Resources.Load<Sprite>("characters/legs");
         characterLegs.sprite = legsSprite;
 
+        isPaused = false;
         StartCoroutine(ClientEnter());
     }
 
@@ -151,6 +155,7 @@ public class Game01 : MonoBehaviourWithContext
         {
             //chequear tiempo restante
             float timeConsumedPerc = clock.fillAmount; //0: todo el tiempo / 1: nada de tiempo
+            currentLevelTimer = -1;
 
             //chequear cantidad de tags cumplidos
             List<string> currentCharacterTags = new List<string>();
@@ -172,6 +177,23 @@ public class Game01 : MonoBehaviourWithContext
                 yield return new WaitForSeconds(0.5f);
             }
 
+            stars = StarsByTags(currentLevelTags.Length, cantTagsVerified);
+            Debug.LogFormat("Lavel {3}; Quiero {0} tags, consegui {1} --> {2} estrellas", currentLevelTags.Length, cantTagsVerified, stars, currentLevel +1);
+
+            if (timeConsumedPerc > 0.5f)
+            {
+                if (timeConsumedPerc > 0.75f)
+                {
+                    stars -= 2;
+                    Debug.LogFormat("Lavel {0}; Casi que se queda sin tiempo, descuenta 2 estrellas, le quedan {1}", currentLevel + 1, stars);
+                }
+                else
+                {
+                    stars -= 1;
+                    Debug.LogFormat("Lavel {0}; Casi que se queda sin tiempo, descuenta 2 estrella, le quedan {1}", currentLevel + 1, stars);
+                }
+            }
+
             //chequear cantidad de personajes utilizados
             int cantUsedCharacters = 1;
             if (head != body && head != legs)
@@ -179,7 +201,9 @@ public class Game01 : MonoBehaviourWithContext
                 if (body != legs)
                     cantUsedCharacters = 3;
                 else
+                {
                     cantUsedCharacters = 2;
+                }
             }
             else
             {
@@ -187,9 +211,19 @@ public class Game01 : MonoBehaviourWithContext
                     cantUsedCharacters = 2;
             }
 
-            //calcular estrellas
-            stars = 3;
+            if (cantUsedCharacters == 2)
+            {
+                stars -= 1;
+                Debug.LogFormat("Level {0}; uso solo 2 personajes --> resto 1 estrella, quedan {1}", currentLevel + 1, stars);
+            }
+            else if (cantUsedCharacters == 1)
+            {
+                Debug.LogFormat("Level {0}; uso un solo personaje --> 1 estrella", currentLevel + 1);
+                stars = 1;
+            }
         }
+
+        stars = Math.Max(1, stars); //verifico que no me hayan quedado estrellas negativas
 
         //mostrar expresion del cliente
         clientFace.Play("clientFace_" + stars + "stars");
@@ -218,6 +252,73 @@ public class Game01 : MonoBehaviourWithContext
             GameOver();
     }
 
+    private int StarsByTags(int desiredTags, int cantTagsVerified)
+    {
+        switch (desiredTags)
+        {
+            case 1:
+                switch (cantTagsVerified)
+                {
+                    case 1:
+                        return 5;
+                    default: //case 0
+                        return 1;
+                }
+            case 2:
+                switch (cantTagsVerified)
+                {
+                    case 2:
+                        return 5;
+                    case 1:
+                        return 3;
+                    default: //case 0
+                        return 1;
+                }
+            case 3:
+                switch (cantTagsVerified)
+                {
+                    case 3:
+                        return 5;
+                    case 2:
+                        return 4;
+                    case 1:
+                        return 3;
+                    default: //case 0
+                        return 1;
+                }
+            case 4:
+                switch (cantTagsVerified)
+                {
+                    case 4:
+                        return 5;
+                    case 3:
+                        return 4;
+                    case 2:
+                        return 3;
+                    case 1:
+                        return 2;
+                    default: //case 0
+                        return 1;
+                }
+            default: //case 5
+                switch (cantTagsVerified)
+                {
+                    case 5:
+                        return 5;
+                    case 4:
+                        return 4;
+                    case 3:
+                        return 3;
+                    case 2:
+                        return 2;
+                    case 1:
+                        return 2;
+                    default: //case 0
+                        return 1;
+                }
+        }
+    }
+
     private void UpdateCurrentRating()
     {
         currentRating = 0;
@@ -240,18 +341,32 @@ public class Game01 : MonoBehaviourWithContext
 
     private void Update()
     {
-        if (currentLevelTimer != -1)
+        if (!isPaused)
         {
-            currentLevelTimer += Time.fixedDeltaTime / 10;
-            clock.fillAmount = currentLevelTimer / gameConfig.LevelConfigs[currentLevel].Time;
-            clockText.text = currentLevelTimer.ToString();
-
-            if (currentLevelTimer >= gameConfig.LevelConfigs[currentLevel].Time)
+            if (currentLevelTimer != -1)
             {
-                currentLevelTimer = -1;
-                StartCoroutine(EndLevel());
+                currentLevelTimer += Time.fixedDeltaTime / 10;
+                clock.fillAmount = currentLevelTimer / gameConfig.LevelConfigs[currentLevel].Time;
+                clockText.text = currentLevelTimer.ToString();
+
+                if (currentLevelTimer >= gameConfig.LevelConfigs[currentLevel].Time)
+                {
+                    currentLevelTimer = -1;
+                    StartCoroutine(EndLevel());
+                }
             }
         }
+    }
+
+    private bool isPaused;
+    public virtual void Pause()
+    {
+        isPaused = true;
+    }
+
+    public virtual void Resume()
+    {
+        isPaused = false;
     }
 
 }

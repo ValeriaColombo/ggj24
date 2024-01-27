@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ButtonClickSound : MonoBehaviourWithContext
 {
-    [SerializeField] private AudioClip audioClip;
+    [SerializeField] private AudioClip[] audioClips;
 
     private void Start()
     {
@@ -12,6 +12,7 @@ public class ButtonClickSound : MonoBehaviourWithContext
 
     private void OnClick()
     {
-        MySoundManager.PlaySfxSound(audioClip);
+        int randomIndex = Random.Range(0, audioClips.Length);
+        MySoundManager.PlaySfxSound(audioClips[randomIndex]);
     }
 }

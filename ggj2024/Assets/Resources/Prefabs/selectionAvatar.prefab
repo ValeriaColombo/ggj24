@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 9197355758782769556}
   - component: {fileID: 8194367084253733527}
   - component: {fileID: 8343758316580754271}
+  - component: {fileID: 19368461730933464}
   m_Layer: 5
   m_Name: btnBody
   m_TagString: Untagged
@@ -227,6 +228,19 @@ MonoBehaviour:
           m_StringArgument: body
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &19368461730933464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4726650202071795733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []
 --- !u!1 &7449560098570595665
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +253,7 @@ GameObject:
   - component: {fileID: 4316005374047893965}
   - component: {fileID: 1621129182615501924}
   - component: {fileID: 2261643583285668267}
+  - component: {fileID: 3520321243221148704}
   m_Layer: 5
   m_Name: btnLegs
   m_TagString: Untagged
@@ -359,6 +374,19 @@ MonoBehaviour:
           m_StringArgument: legs
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3520321243221148704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449560098570595665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []
 --- !u!1 &8305505482139153451
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +399,7 @@ GameObject:
   - component: {fileID: 6993378085977055159}
   - component: {fileID: 3368678138613391924}
   - component: {fileID: 5542195289741459213}
+  - component: {fileID: 8211492527996363182}
   m_Layer: 5
   m_Name: btnHead
   m_TagString: Untagged
@@ -491,3 +520,16 @@ MonoBehaviour:
           m_StringArgument: head
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8211492527996363182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8305505482139153451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []

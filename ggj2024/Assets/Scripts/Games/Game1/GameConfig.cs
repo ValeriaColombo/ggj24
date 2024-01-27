@@ -10,9 +10,9 @@ public class GameConfig
     public GameConfig()
     {
         Characters = new Dictionary<string, string[]>();
-        Characters.Add("mickey", new string[]{ "Animación", "Rojo", "Animal", "Amarillo", "Poca ropa" });
+        Characters.Add("mickey", new string[] { "Animación", "Rojo", "Animal", "Amarillo", "Poca ropa" });
         Characters.Add("alicia", new string[] { "Animación", "Azul", "Niñez", "Amarillo" });
-        Characters.Add("winnie", new string[] { "Animación", "Animal", "Furries", "Amarillo", "Poca ropa" });
+        Characters.Add("winnie", new string[] { "Animación", "Animal", "Furry", "Amarillo", "Poca ropa" });
         Characters.Add("popeye", new string[] { "Animación", "Fuerte", "Azul", "Mar" });
         Characters.Add("tarzan", new string[] { "Fuerte", "Poca ropa" });
         Characters.Add("cthulhu", new string[] { "Terror", "Verde", "Mar", "Poca ropa" });
@@ -35,21 +35,26 @@ public class GameConfig
         }
 
         LevelConfigs = new List<LevelConfig>();
-        LevelConfigs.Add(new LevelConfig(1, 30));
-        LevelConfigs.Add(new LevelConfig(1, 30));
-        LevelConfigs.Add(new LevelConfig(2, 30));
-        LevelConfigs.Add(new LevelConfig(2, 30));
-        LevelConfigs.Add(new LevelConfig(3, 30));
-        LevelConfigs.Add(new LevelConfig(3, 20));
-        LevelConfigs.Add(new LevelConfig(3, 20));
-        LevelConfigs.Add(new LevelConfig(4, 30));
-        LevelConfigs.Add(new LevelConfig(4, 20));
-        LevelConfigs.Add(new LevelConfig(4, 20));
-        LevelConfigs.Add(new LevelConfig(4, 20));
-        LevelConfigs.Add(new LevelConfig(4, 20));
-        LevelConfigs.Add(new LevelConfig(5, 20));
-        LevelConfigs.Add(new LevelConfig(5, 20));
-        LevelConfigs.Add(new LevelConfig(5, 10));
+        LevelConfigs.Add(new LevelConfig(1, 30));//1
+        LevelConfigs.Add(new LevelConfig(2, 25));//2
+        LevelConfigs.Add(new LevelConfig(2, 25));//3
+        LevelConfigs.Add(new LevelConfig(2, 25));//4
+        LevelConfigs.Add(new LevelConfig(3, 25));//5
+        LevelConfigs.Add(new LevelConfig(3, 25));//6
+        LevelConfigs.Add(new LevelConfig(3, 25));//7
+        LevelConfigs.Add(new LevelConfig(3, 25));//8
+        LevelConfigs.Add(new LevelConfig(4, 25));//9
+        LevelConfigs.Add(new LevelConfig(4, 25));//10
+        LevelConfigs.Add(new LevelConfig(4, 25));//11
+        LevelConfigs.Add(new LevelConfig(4, 20));//12
+        LevelConfigs.Add(new LevelConfig(4, 20));//13
+        LevelConfigs.Add(new LevelConfig(5, 20));//14
+        LevelConfigs.Add(new LevelConfig(5, 15));//15
+        LevelConfigs.Add(new LevelConfig(5, 15));//16
+        LevelConfigs.Add(new LevelConfig(5, 15));//17
+        LevelConfigs.Add(new LevelConfig(5, 10));//18
+        LevelConfigs.Add(new LevelConfig(5, 10));//19
+        LevelConfigs.Add(new LevelConfig(5, 10));//20
     }
 
     public string[] GetRandomTags(int countTags)
