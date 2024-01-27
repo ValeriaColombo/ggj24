@@ -614,6 +614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4244972415438676591}
+  - component: {fileID: 5696450628172339831}
   m_Layer: 5
   m_Name: stars
   m_TagString: Untagged
@@ -645,6 +646,24 @@ RectTransform:
   m_AnchoredPosition: {x: 216, y: 457}
   m_SizeDelta: {x: 555.1364, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5696450628172339831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632036305242904122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f61a4db2b592d174fa9b0c4dd3828a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars:
+  - {fileID: 4009374419804640771}
+  - {fileID: 7912004876102068062}
+  - {fileID: 50847889979935292}
+  - {fileID: 7589688986563496202}
+  - {fileID: 5102478823457343385}
 --- !u!1 &7589688986563496202
 GameObject:
   m_ObjectHideFlags: 0

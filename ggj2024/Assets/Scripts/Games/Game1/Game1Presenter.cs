@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.SceneManagement;
 
 public class Game1Presenter : GameScreenPresenter
@@ -11,6 +12,10 @@ public class Game1Presenter : GameScreenPresenter
         this.gameplay.OnFinishGame.AddListener(OnGameOver);
 
         //MySoundManager.PlayMusicLoop("Sound/music01");
+
+        MyView.ShowTutorial();
+
+        gameplay.LoadAllAvatars();
     }
 
     private void OnGameOver(int points)
@@ -21,5 +26,10 @@ public class Game1Presenter : GameScreenPresenter
     public override void PlayAgain()
     {
         SceneManager.LoadScene("Game01");
+    }
+
+    public void OnTutorialClosed()
+    {
+        gameplay.StartLevel();
     }
 }

@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230a82202734433469d60795266ea909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterId: 
+  avatarImg: {fileID: 421381909428726203}
   OnPartSelected:
     m_PersistentCalls:
       m_Calls: []
