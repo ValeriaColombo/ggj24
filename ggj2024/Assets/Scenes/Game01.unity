@@ -1067,7 +1067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
 --- !u!1 &452050948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,10 +1564,6 @@ PrefabInstance:
     - target: {fileID: 9197284217244202116, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
       propertyPath: m_Name
       value: GameOverPopUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197284217244202116, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4019,7 +4014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
 --- !u!114 &1614127524 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2369281811922137037, guid: b9a681b6db674ca408aa43d731d388a0, type: 3}
@@ -6093,7 +6087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
 --- !u!114 &6212822874281753001
 MonoBehaviour:
   m_ObjectHideFlags: 0

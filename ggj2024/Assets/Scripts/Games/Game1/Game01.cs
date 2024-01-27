@@ -228,13 +228,13 @@ public class Game01 : MonoBehaviourWithContext
         //mostrar expresion del cliente
         MySoundManager.PlaySfxSound(GetClientSoundByStars(stars));
         clientFace.Play("clientFace_" + stars + "stars");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1.3f);
 
         //mostrar estrellas
         clientRatingDialogueBox.SetActive(true);
         clientRating.UpdateValue(stars);
         MySoundManager.PlaySfxSound("Sound/rate");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.8f);
 
         //actualizar rating general
         ratings.Add(stars);
@@ -261,13 +261,13 @@ public class Game01 : MonoBehaviourWithContext
             case 1:
                 return "Sound/client_1star_" + Random.Range(0, 5);
             case 2:
-                return "Sound/client_2star_" + Random.Range(0, 2);
+                return "Sound/client_2star_" + Random.Range(0, 3);
             case 3:
-                return "Sound/client_3star_" + Random.Range(0, 2);
+                return "Sound/client_3star_" + Random.Range(0, 3);
             case 4:
-                return "Sound/client_4star_" + Random.Range(0, 2);
+                return "Sound/client_4star_" + Random.Range(0, 3);
             default: //case 5:
-                return "Sound/client_5star_" + Random.Range(0, 5);
+                return "Sound/client_5star_" + Random.Range(0, 6);
         }
     }
 

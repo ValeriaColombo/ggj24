@@ -113,7 +113,7 @@ public class SoundManager : MonoBehaviour
             musicAudioSource = Instantiate(Resources.Load<AudioSource>("Prefabs/GameBase/ReusableAudioSource"), transform);
 
         musicAudioSource.clip = clip;
-        musicAudioSource.volume = MusicVolume;
+        musicAudioSource.volume = MusicVolume/2f;
         musicAudioSource.loop = true;
         musicAudioSource.Play();
     }
