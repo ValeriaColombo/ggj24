@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -223,7 +223,7 @@ public class Game01 : MonoBehaviourWithContext
             }
         }
 
-        stars = Math.Max(1, stars); //verifico que no me hayan quedado estrellas negativas
+        stars = System.Math.Max(1, stars); //verifico que no me hayan quedado estrellas negativas
 
         //mostrar expresion del cliente
         MySoundManager.PlaySfxSound(GetClientSoundByStars(stars));
@@ -233,6 +233,7 @@ public class Game01 : MonoBehaviourWithContext
         //mostrar estrellas
         clientRatingDialogueBox.SetActive(true);
         clientRating.UpdateValue(stars);
+        MySoundManager.PlaySfxSound("Sound/rate");
         yield return new WaitForSeconds(0.3f);
 
         //actualizar rating general
@@ -258,15 +259,15 @@ public class Game01 : MonoBehaviourWithContext
         switch (stars)
         {
             case 1:
-                return "TODOOO";
+                return "Sound/client_1star_" + Random.Range(0, 5);
             case 2:
-                return "TODOOO";
+                return "Sound/client_2star_" + Random.Range(0, 2);
             case 3:
-                return "TODOOO";
+                return "Sound/client_3star_" + Random.Range(0, 2);
             case 4:
-                return "TODOOO";
+                return "Sound/client_4star_" + Random.Range(0, 2);
             default: //case 5:
-                return "TODOOO";
+                return "Sound/client_5star_" + Random.Range(0, 5);
         }
     }
 

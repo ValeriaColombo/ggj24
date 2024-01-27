@@ -1,6 +1,4 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class GameOverPopup : BasicPopup
@@ -21,15 +19,15 @@ public class GameOverPopup : BasicPopup
         switch (points)
         {
             case 1:
-                return "TODOOO";
+                return "Sound/gameover_bad";
             case 2:
-                return "TODOOO";
+                return "Sound/gameover_medium";
             case 3:
-                return "TODOOO";
+                return "Sound/gameover_medium";
             case 4:
-                return "TODOOO";
+                return "Sound/gameover_good_" + Random.Range(0,2);
             default: //case 5:
-                return "TODOOO";
+                return "Sound/gameover_good_" + Random.Range(0, 2);
         }
     }
 
