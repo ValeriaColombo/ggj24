@@ -28,6 +28,7 @@ public class Game01 : MonoBehaviourWithContext
 
     [SerializeField] private Button btnCommitCharacter;
     [SerializeField] private Animator clientFace;
+    [SerializeField] private Animator client;
 
     public UnityEvent<int> OnFinishGame { get; private set; }
     private GameConfig gameConfig;
@@ -116,8 +117,9 @@ public class Game01 : MonoBehaviourWithContext
     private IEnumerator ClientEnter()
     {
         //entra cliente
+        client.Play("client_enter");
         clientFace.Play("clientFace_waiting");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
 
         clientOrder.SetActive(true);
         for (int i = 0; i < tagChecks.Length; i++)
@@ -201,9 +203,13 @@ public class Game01 : MonoBehaviourWithContext
         //actualizar rating general
         ratings.Add(stars);
         UpdateCurrentRating();
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
 
         //el cliente se va
+        clientOrder.SetActive(false);
+        clientRatingDialogueBox.SetActive(false);
+        client.Play("client_exit");
+        yield return new WaitForSeconds(1f);
 
         currentLevel++;
         if (currentLevel < gameConfig.LevelConfigs.Count)
