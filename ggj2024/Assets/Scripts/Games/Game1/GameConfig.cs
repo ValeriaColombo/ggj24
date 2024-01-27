@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class GameConfig
 {
@@ -10,30 +11,35 @@ public class GameConfig
     public GameConfig()
     {
         Characters = new Dictionary<string, string[]>();
-        Characters.Add("mickey", new string[] { "Animación", "Rojo", "Animal", "Amarillo", "Poca ropa" });
-        Characters.Add("alicia", new string[] { "Animación", "Azul", "Niñez", "Amarillo" });
-        Characters.Add("winnie", new string[] { "Animación", "Animal", "Furry", "Amarillo", "Poca ropa" });
-        Characters.Add("popeye", new string[] { "Animación", "Fuerte", "Azul", "Mar" });
-        Characters.Add("tarzan", new string[] { "Fuerte", "Poca ropa" });
-        Characters.Add("cthulhu", new string[] { "Terror", "Verde", "Mar", "Poca ropa" });
-        Characters.Add("dracula", new string[] { "Terror", "Rojo" });
-        Characters.Add("caperucita", new string[] { "Rojo", "Niñez" });
-        Characters.Add("sherlock", new string[] { "Verde", "Justiciero" });
-        Characters.Add("robinhood", new string[] { "Verde", "Justiciero" });
-        Characters.Add("principito", new string[] { "Azul", "Amarillo", "Niñez" });
-        Characters.Add("kingkong", new string[] { "Animal", "Furry", "Fuerte" });
-        Characters.Add("peterpan", new string[] { "Verde", "Niñez" });
+        Characters.Add("mickey", new string[] { "animacion", "rojo", "animal", "amarillo", "pocaropa" });
+        Characters.Add("alicia", new string[] { "animacion", "azul", "ninez", "amarillo" });
+        Characters.Add("winnie", new string[] { "animacion", "animal", "furry", "amarillo", "pocaropa" });
+        Characters.Add("popeye", new string[] { "animacion", "fuerte", "azul", "mar" });
+        Characters.Add("tarzan", new string[] { "fuerte", "pocaropa" });
+        Characters.Add("cthulhu", new string[] { "terror", "verde", "mar", "pocaropa" });
+        Characters.Add("dracula", new string[] { "terror", "rojo" });
+        Characters.Add("caperucita", new string[] { "rojo", "ninez" });
+        Characters.Add("sherlock", new string[] { "verde", "justiciero" });
+        Characters.Add("robinhood", new string[] { "verde", "justiciero" });
+        Characters.Add("principito", new string[] { "azul", "amarillo", "ninez" });
+        Characters.Add("kingkong", new string[] { "animal", "furry", "fuerte" });
+        Characters.Add("peterpan", new string[] { "verde", "ninez" });
 
+
+        string s = "";
         AllTheTags = new List<string>();
         foreach (var character in Characters.Keys)
         {
             foreach (var tag in Characters[character])
             {
                 if (!AllTheTags.Contains(tag))
+                {
                     AllTheTags.Add(tag);
+                    s += "\n" + tag;
+                }
             }
         }
-
+        Debug.Log(s);
         LevelConfigs = new List<LevelConfig>();
         LevelConfigs.Add(new LevelConfig(1, 30));//1
         LevelConfigs.Add(new LevelConfig(2, 25));//2

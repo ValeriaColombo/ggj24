@@ -99,7 +99,7 @@ public class Game01 : MonoBehaviourWithContext
 
     public void StartLevel()
     {
-        levelNmbr.text = "Level " + (currentLevel +1).ToString();
+        levelNmbr.text = MyLocalization.GetLocalizedText("nivel") + " " + (currentLevel +1).ToString();
 
         currentLevelTags = gameConfig.GetRandomTags(gameConfig.LevelConfigs[currentLevel].CountTags);
         head = "";
@@ -135,7 +135,7 @@ public class Game01 : MonoBehaviourWithContext
         tagsText.text = "";
         foreach (var tag in currentLevelTags)
         {
-            tagsText.text += "- " + tag + "\n";
+            tagsText.text += "- " + MyLocalization.GetLocalizedText("tag_" + tag) + "\n";
             yield return new WaitForSeconds(0.2f);
         }
 
@@ -226,6 +226,7 @@ public class Game01 : MonoBehaviourWithContext
         stars = Math.Max(1, stars); //verifico que no me hayan quedado estrellas negativas
 
         //mostrar expresion del cliente
+        MySoundManager.PlaySfxSound(GetClientSoundByStars(stars));
         clientFace.Play("clientFace_" + stars + "stars");
         yield return new WaitForSeconds(0.3f);
 
@@ -250,6 +251,23 @@ public class Game01 : MonoBehaviourWithContext
             StartLevel();
         else
             GameOver();
+    }
+
+    private string GetClientSoundByStars(int stars)
+    {
+        switch (stars)
+        {
+            case 1:
+                return "TODOOO";
+            case 2:
+                return "TODOOO";
+            case 3:
+                return "TODOOO";
+            case 4:
+                return "TODOOO";
+            default: //case 5:
+                return "TODOOO";
+        }
     }
 
     private int StarsByTags(int desiredTags, int cantTagsVerified)

@@ -1,6 +1,6 @@
 TID,ES,EN
-game01_title,Juego 1,Game 1
-game02_title,Juego 2,Game 2
+game_title,Randominiozador Público,Public Randomainzer
+nivel,Nivel,Level
 settings,Configuraciones,Settings
 terms_conditions,Términos y condiciones,Terms & Conditions
 credits,Créditos,Credits
@@ -13,3 +13,18 @@ resume,Continuar,Resume
 finish_game_x_points,Terminar juego [] {0} pts,Finish game [] {0} pts
 ends_in,Termina en {0},Ends in {0}
 play,Jugar,Play
+entregar,Entregar,Deliver
+tutorial,Tutorial,Tutorial
+tag_animacion,Animación,Animation
+tag_rojo,Rojo,Red
+tag_animal,Animal,Animal
+tag_amarillo,Amarillo,Yellow
+tag_pocaropa,Poca ropa,Few Clothes
+tag_azul,Azul,Blue
+tag_ninez,Niñez,Childhood
+tag_furry,Furry,Furry
+tag_fuerte,Fuerte,Strong
+tag_mar,Mar,Sea
+tag_terror,Terror,Horror
+tag_verde,Verde,Green
+tag_justiciero,Justiciero,Vigilante

@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HomeScreenView : MonoBehaviour
+public class HomeScreenView : MonoBehaviourWithContext
 {
     private HomeScreenPresenter presenter;
 
     [SerializeField] private SettingsPopUp settingsPopUp;
     [SerializeField] private CreditsPopup creditsPopUp;
 
+    [SerializeField] private GameObject ENicon;
+    [SerializeField] private GameObject ESicon;
+
     void Start()
     {
         presenter = new HomeScreenPresenter(this);
         settingsPopUp.Hide();
         creditsPopUp.Hide();
+
+        ENicon.SetActive(MyLocalization.CurrentLang == "EN");
+        ESicon.SetActive(MyLocalization.CurrentLang == "ES");
     }
 
     private void Update()
@@ -58,5 +64,16 @@ public class HomeScreenView : MonoBehaviour
     public void CloseApp()
     {
         Application.Quit();
+    }
+
+    public void OnLangButtonClick()
+    {
+        if (MyLocalization.CurrentLang == "EN")
+            MyLocalization.SetLanguage("ES");
+        else
+            MyLocalization.SetLanguage("EN");
+
+        ENicon.SetActive(MyLocalization.CurrentLang == "EN");
+        ESicon.SetActive(MyLocalization.CurrentLang == "ES");
     }
 }

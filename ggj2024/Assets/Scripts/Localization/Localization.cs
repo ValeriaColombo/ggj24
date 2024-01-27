@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Localization : MonoBehaviour
 {
     private const string DEFAULT_LANG = "ES";
     private const string Key_CurrentLang = "lang";
     private static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
+
+    public UnityEvent OnLangChanged;
 
     public string CurrentLang { get; private set; }
 
@@ -57,6 +60,16 @@ public class Localization : MonoBehaviour
             input = input.Replace("[]", "\n");
 
         return input;
+    }
+
+    internal void SetLanguage(string langToSet)
+    {
+        CurrentLang = langToSet;
+
+        PlayerPrefs.SetString(Key_CurrentLang, CurrentLang);
+        PlayerPrefs.Save();
+
+        OnLangChanged.Invoke();
     }
 
     private char FieldSplitChar()
