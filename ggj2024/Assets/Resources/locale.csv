@@ -1,0 +1,15 @@
+TID,ES,EN
+game01_title,Juego 1,Game 1
+game02_title,Juego 2,Game 2
+settings,Configuraciones,Settings
+terms_conditions,Términos y condiciones,Terms & Conditions
+credits,Créditos,Credits
+gameover,Fin del juego,Game Over
+x_points,{0} Puntos,{0} points
+play_again,Jugar de nuevo,Play again
+back_to_home,Volver atras,Back to home
+pause,Pausa,Pause
+resume,Continuar,Resume
+finish_game_x_points,Terminar juego [] {0} pts,Finish game [] {0} pts
+ends_in,Termina en {0},Ends in {0}
+play,Jugar,Play
