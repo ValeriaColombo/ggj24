@@ -9,6 +9,8 @@ public class Game1ScreenView : GameScreenView
 
     [SerializeField] private Game01 gameplay;
     [SerializeField] private GameObject tutorialScreen;
+    [SerializeField] private GameObject tuto_es;
+    [SerializeField] private GameObject tuto_en;
 
     protected override void Initialize()
     {
@@ -19,6 +21,8 @@ public class Game1ScreenView : GameScreenView
     public void ShowTutorial()
     {
         tutorialScreen.SetActive(true);
+        tuto_en.SetActive(MyLocalization.CurrentLang == "EN");
+        tuto_es.SetActive(MyLocalization.CurrentLang == "ES");
     }
 
     public void OnCloseTutorial()

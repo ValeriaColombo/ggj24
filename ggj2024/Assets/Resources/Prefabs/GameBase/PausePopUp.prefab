@@ -181,8 +181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.2017975, y: 0.07700348}
-  m_SizeDelta: {x: -57.5805, y: -56.5195}
+  m_AnchoredPosition: {x: 0.95210266, y: 2.101097}
+  m_SizeDelta: {x: -52.9327, y: -56.5195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &747397835470403627
 CanvasRenderer:
@@ -409,7 +409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.3717957, y: 6.1492}
+  m_AnchoredPosition: {x: -1.3717957, y: 2.101097}
   m_SizeDelta: {x: -57.5805, y: -52.4713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8713088756160567462
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3529412}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6862745}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAUSE
+  m_text: Pause
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e08b5b70add05b46a849e4eb927a864, type: 2}
   m_sharedMaterial: {fileID: 2636149934437750193, guid: 2e08b5b70add05b46a849e4eb927a864, type: 2}
@@ -858,7 +858,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

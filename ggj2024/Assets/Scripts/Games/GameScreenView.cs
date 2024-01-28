@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameScreenView : MonoBehaviour
+public class GameScreenView : MonoBehaviourWithContext
 {
     protected GameScreenPresenter presenter;
 

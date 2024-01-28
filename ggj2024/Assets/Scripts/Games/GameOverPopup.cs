@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class GameOverPopup : BasicPopup
@@ -6,6 +7,7 @@ public class GameOverPopup : BasicPopup
     public UnityEvent OnPlayAgainButtonClickEvent { get; private set; }
 
     [SerializeField] private Stars stars;
+    [SerializeField] private TMP_Text finaleDesc;
 
     public virtual void Show(int points)
     {
