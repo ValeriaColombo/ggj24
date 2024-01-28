@@ -6,8 +6,8 @@ terms_conditions,Términos y condiciones,Terms & Conditions
 credits,Créditos,Credits
 gameover,Fin del juego,Game Over
 x_points,{0} Puntos,{0} points
-play_again,Jugar de nuevo,Play again
-back_to_home,Volver atras,Back to home
+play_again,Jugar [] de nuevo,Play again
+back_to_home,Volver [] atras,Back to [] home
 pause,Pausa,Pause
 resume,Continuar,Resume
 finish_game_x_points,Terminar juego [] {0} pts,Finish game [] {0} pts

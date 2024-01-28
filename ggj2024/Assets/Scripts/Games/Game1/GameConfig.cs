@@ -13,7 +13,7 @@ public class GameConfig
         Characters = new Dictionary<string, string[]>();
         Characters.Add("mickey", new string[] { "animacion", "rojo", "animal", "amarillo", "pocaropa" });
         Characters.Add("alicia", new string[] { "animacion", "azul", "ninez", "amarillo" });
-        Characters.Add("winnie", new string[] { "animacion", "animal", "furry", "amarillo", "pocaropa" });
+ //       Characters.Add("winnie", new string[] { "animacion", "animal", "furry", "amarillo", "pocaropa" });
         Characters.Add("popeye", new string[] { "animacion", "fuerte", "azul", "mar" });
         Characters.Add("tarzan", new string[] { "fuerte", "pocaropa" });
         Characters.Add("cthulhu", new string[] { "terror", "verde", "mar", "pocaropa" });
@@ -23,7 +23,7 @@ public class GameConfig
         Characters.Add("robinhood", new string[] { "verde", "justiciero" });
         Characters.Add("principito", new string[] { "azul", "amarillo", "ninez" });
         Characters.Add("kingkong", new string[] { "animal", "furry", "fuerte" });
-        Characters.Add("peterpan", new string[] { "verde", "ninez" });
+ //       Characters.Add("peterpan", new string[] { "verde", "ninez" });
 
 
         string s = "";

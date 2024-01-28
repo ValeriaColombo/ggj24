@@ -1807,30 +1807,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1303462130}
     m_Modifications:
-    - target: {fileID: 2612118689441043007, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2649307651250259633, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3358895229946890887, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3893674946131094632, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3893674946131094632, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368855379951177482, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4622796782773762279, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
       propertyPath: m_Name
       value: CreditsPopUp
@@ -1917,18 +1893,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5212293736513798759, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7531010475925398118, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7531010475925398118, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7531010475925398118, guid: 7f9d98f4e1485de48a36abfd1a23136b, type: 3}
-      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -89,7 +89,6 @@ public class Game01 : MonoBehaviourWithContext
         {
             if (i < characters.Count)
             {
-                avatarBtns[i].SetCharacterId(characters[i]);
                 avatarBtns[i].OnPartSelected.AddListener(BodyPartSelected);
             }
             else

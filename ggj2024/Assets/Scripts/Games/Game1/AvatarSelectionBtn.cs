@@ -9,19 +9,11 @@ public class AvatarSelectionBtn : MonoBehaviour
 {
     [SerializeField] private Image avatarImg;
 
-    private string characterId;
+    [SerializeField] private string characterId;
     public UnityEvent<string, string> OnPartSelected;
 
     public void OnPartBtnClick(string part)
     {
         OnPartSelected.Invoke(characterId, part);
-    }
-
-    public void SetCharacterId(string id)
-    {
-        characterId = id;
-        var avatarSprite = Resources.Load<Sprite>("characters/avatar_full_" + id);
-
-        avatarImg.sprite = avatarSprite;
     }
 }
