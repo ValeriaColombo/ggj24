@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 847, y: 421}
+  m_AnchoredPosition: {x: 876, y: 452}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7912059638621776340
@@ -902,8 +902,8 @@ RectTransform:
   m_GameObject: {fileID: 1476049328055409150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6740115289314139032}
   - {fileID: 8384220138731664873}
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Design, Narrative, UI Design, Sound effects, Sound edition
+  m_text: Game Design, Narrative, UI, Sound effects, Sound edition
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
   m_sharedMaterial: {fileID: -137700632923473560, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Design, Narrativa, UI Design, Efectos de Sonido, Edici\xF3n de Sonido"
+  m_text: "Game Design, Narrativa, UI, Efectos de Sonido, Edici\xF3n de Sonido"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
   m_sharedMaterial: {fileID: -137700632923473560, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Image edition, Art, Sound effects
+  m_text: Image edition, Art, Sound effects, UI
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
   m_sharedMaterial: {fileID: -137700632923473560, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
@@ -2628,7 +2628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Edici\xF3n de imagen, Arte, Efectos de Sonido"
+  m_text: "Edici\xF3n de imagen, Arte, Efectos de Sonido, UI"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}
   m_sharedMaterial: {fileID: -137700632923473560, guid: 20aff087bde58fe4dbe9c4f0f4c099d3, type: 2}

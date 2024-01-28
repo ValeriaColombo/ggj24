@@ -160,7 +160,6 @@ GameObject:
   - component: {fileID: 2870183701058957616}
   - component: {fileID: 908073143448543099}
   - component: {fileID: 8719182798517258542}
-  - component: {fileID: 4749752368586716316}
   m_Layer: 5
   m_Name: desc
   m_TagString: Untagged
@@ -286,20 +285,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4749752368586716316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099400494918020194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e6345810f3b9a48bde4696820e65b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TID: gameover
-  parameters: []
 --- !u!1 &3543953759232828718
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,8 +902,8 @@ RectTransform:
   m_GameObject: {fileID: 8697066023212709479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 247227216951129612}
   - {fileID: 2870183701058957616}
