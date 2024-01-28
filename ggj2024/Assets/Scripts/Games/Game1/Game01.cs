@@ -23,6 +23,7 @@ public class Game01 : MonoBehaviourWithContext
     [SerializeField] private GameObject clientOrder;
     [SerializeField] private GameObject[] tagChecks;
     [SerializeField] private TMP_Text tagsText;
+    [SerializeField] private GameObject clockGO;
     [SerializeField] private Image clock;
     [SerializeField] private TMP_Text clockText;
 
@@ -114,6 +115,7 @@ public class Game01 : MonoBehaviourWithContext
         characterLegs.sprite = legsSprite;
 
         isPaused = false;
+        currentLevelTimer = 0;
         StartCoroutine(ClientEnter());
     }
 
@@ -138,6 +140,7 @@ public class Game01 : MonoBehaviourWithContext
             yield return new WaitForSeconds(0.2f);
         }
 
+        clockGO.SetActive(true);
         currentLevelTimer = 0;
     }
 
@@ -223,6 +226,8 @@ public class Game01 : MonoBehaviourWithContext
         }
 
         stars = System.Math.Max(1, stars); //verifico que no me hayan quedado estrellas negativas
+
+        clockGO.SetActive(false);
 
         //mostrar expresion del cliente
         MySoundManager.PlaySfxSound(GetClientSoundByStars(stars));
