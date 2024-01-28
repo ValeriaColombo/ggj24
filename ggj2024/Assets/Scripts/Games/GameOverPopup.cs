@@ -13,6 +13,7 @@ public class GameOverPopup : BasicPopup
     {
         MySoundManager.PlaySfxSound(SoundByStars(points));
         stars.UpdateValue(points);
+        finaleDesc.text = MyLocalization.GetLocalizedText("ending_" + points +"_star");
         base.Show();
     }
 

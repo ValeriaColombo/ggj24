@@ -1174,10 +1174,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1303462130}
     m_Modifications:
-    - target: {fileID: 4004401775508417523, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
-      propertyPath: finaleDesc
-      value: 
-      objectReference: {fileID: 1568186715}
     - target: {fileID: 5529440814915405777, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1262,7 +1258,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOverPopUp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9197284217244202116, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4749752368586716316, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3652,17 +3653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6b414182b1c89459653e4684a1bc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1568186715 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8719182798517258542, guid: 1c7fb81a4df645045877ca139302d418, type: 3}
-  m_PrefabInstance: {fileID: 527869809}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1578276899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3843,7 +3833,6 @@ GameObject:
   - component: {fileID: 1648237799}
   - component: {fileID: 1648237802}
   - component: {fileID: 1648237801}
-  - component: {fileID: 1648237800}
   m_Layer: 5
   m_Name: tuto_text_es
   m_TagString: Untagged
@@ -3870,20 +3859,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0055027, y: -453.19}
   m_SizeDelta: {x: 1430.8369, y: 636.0532}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1648237800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648237798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e6345810f3b9a48bde4696820e65b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TID: tutorial
-  parameters: []
 --- !u!114 &1648237801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4694,7 +4669,6 @@ GameObject:
   - component: {fileID: 1917862226}
   - component: {fileID: 1917862229}
   - component: {fileID: 1917862228}
-  - component: {fileID: 1917862227}
   m_Layer: 5
   m_Name: tuto_text_en
   m_TagString: Untagged
@@ -4721,20 +4695,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0055027, y: -453.19}
   m_SizeDelta: {x: 1430.8369, y: 636.0532}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1917862227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917862225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6e6345810f3b9a48bde4696820e65b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TID: tutorial
-  parameters: []
 --- !u!114 &1917862228
 MonoBehaviour:
   m_ObjectHideFlags: 0

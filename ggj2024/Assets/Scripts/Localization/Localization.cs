@@ -59,6 +59,9 @@ public class Localization : MonoBehaviour
         while (input.Contains("[]"))
             input = input.Replace("[]", "\n");
 
+        while (input.Contains("[.]"))
+            input = input.Replace("[.]", ",");
+
         return input;
     }
 
