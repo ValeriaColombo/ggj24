@@ -8,6 +8,8 @@ public class Game1Presenter : GameScreenPresenter
 
     public Game1Presenter(Game1ScreenView view, Game01 gameplay) : base(view)
     {
+        Application.targetFrameRate = 60;
+
         this.gameplay = gameplay;
         this.gameplay.OnFinishGame.AddListener(OnGameOver);
 

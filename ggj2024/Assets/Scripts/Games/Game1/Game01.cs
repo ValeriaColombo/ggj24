@@ -114,13 +114,15 @@ public class Game01 : MonoBehaviourWithContext
         var legsSprite = Resources.Load<Sprite>("characters/legs");
         characterLegs.sprite = legsSprite;
 
-        isPaused = false;
-        currentLevelTimer = 0;
+        StopAllCoroutines();
         StartCoroutine(ClientEnter());
     }
 
     private IEnumerator ClientEnter()
     {
+        isPaused = false;
+        currentLevelTimer = 0;
+
         //entra cliente
         client.Play("client_enter");
         clientFace.Play("clientFace_waiting");
@@ -146,6 +148,7 @@ public class Game01 : MonoBehaviourWithContext
 
     public void CommitCharacter()
     {
+        StopAllCoroutines();
         StartCoroutine(EndLevel());
     }
 
@@ -368,13 +371,14 @@ public class Game01 : MonoBehaviourWithContext
         {
             if (currentLevelTimer != -1)
             {
-                currentLevelTimer += Time.fixedDeltaTime / 10;
+                currentLevelTimer += Time.fixedDeltaTime;
                 clock.fillAmount = currentLevelTimer / gameConfig.LevelConfigs[currentLevel].Time;
                 clockText.text = currentLevelTimer.ToString();
 
                 if (currentLevelTimer >= gameConfig.LevelConfigs[currentLevel].Time)
                 {
                     currentLevelTimer = -1;
+                    StopAllCoroutines();
                     StartCoroutine(EndLevel());
                 }
             }
